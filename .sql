@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `coins` INT NOT NULL DEFAULT '0' AFTER `status`;
