@@ -125,8 +125,12 @@ end)
 ESX.RegisterCommand('givecoins', 'admin', function(xPlayer, args, showError)
 
     local target = ESX.GetPlayerFromId(tonumber(args['Id']))
+
+    if target == nil then xPlayer.showNotification("La personne n'est pas ~b~en ligne") return end
 	
     MySQL.Async.execute("UPDATE users SET coins = coins + ? WHERE identifier = ?", {tonumber(args['Coins']), target.identifier})
+
+    target.showNotification("Vous avez reçus : ~r~"..args['Coins'].."~s~ coins")
 
 end, false, {help = "Donner Points Boutique", validate = true, arguments = {
 	{name = 'Id', help = "Id", type = 'number'},

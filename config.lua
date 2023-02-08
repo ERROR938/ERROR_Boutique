@@ -11,7 +11,7 @@ Config.colors = {255, 255, 255} -- couleurs RGB du menu
 
 Config.weaponList = {
 
-    {label = "Pistolet", weapon = "weapon_pistol", price = 200},
+    {label = "Pistolet", weapon = "weapon_pistol", price = 400},
     {label = "Pistolet de combat", weapon = "weapon_combatpistol", price = 400},
     {label = "Tazer", weapon = "weapon_stungun", price = 600},
 

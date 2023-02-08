@@ -65,6 +65,7 @@ eBoutique.Events = {
 
         if btn.model then
 
+            if IsPedInAnyVehicle(PlayerPedId(), false) then ESX.ShowNotification("~r~Vous ne devez pas être en voiture") return end
             
             if player_coins >= btn.pricee then
                 
